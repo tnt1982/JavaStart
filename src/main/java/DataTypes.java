@@ -8,6 +8,5 @@ public class DataTypes {
         System.out.println('\uFA14');
         System.out.println("vs.");
         System.out.println('\u2659');
-
     }
 }
