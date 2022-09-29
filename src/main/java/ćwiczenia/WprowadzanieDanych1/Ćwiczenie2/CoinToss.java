@@ -12,24 +12,15 @@ public class CoinToss {
         System.out.println("Wybierz jedną z dwóch opcji: \n1 - orzeł \n2 - reszka");
         int chosenOption = scanner.nextInt();
 
-        if (chosenOption == 1) {
-            System.out.println("Wybrałeś orła.");
-        } else {
-            System.out.println("Wybrałeś reszkę.");
-        }
+        coinTossUtils.printChosenOption(chosenOption);
 
         Thread.sleep(2_000);
-
         System.out.println("Uwaga, rzucam monetą.");
-
         Thread.sleep(2_000);
-
         System.out.println("Moneta się obraca ... i");
-
         Thread.sleep(2_000);
 
         coinTossUtils.betResult(chosenOption);
-
 
     }
 }
