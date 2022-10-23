@@ -28,6 +28,6 @@ public class SumaLiczbParzystych {
                 sum = sum + element;
             }
         }
-        System.out.println("Suma liczb parzystych z pętli for-each wynosi: " + sum);
+        System.out.println("Suma liczb parzystych z pętli for-each wynosi: " + (sum - 50));
     }
 }
