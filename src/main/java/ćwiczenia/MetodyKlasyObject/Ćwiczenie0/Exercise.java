@@ -6,8 +6,11 @@ public class Exercise {
 
     public static void main(String[] args) {
 
-        String name1 = "Ktarzyna";
-        String name2 = "Katarzyna";
+        String name1 = "Ko";
+        String name2 = "Ka";
+
+        System.out.println("hashCode from name1: " + name1.hashCode());
+        System.out.println("hashCode from name2: " + name2.hashCode());
 
         boolean trueOrFalse = Objects.equals(name1, name2);
 
@@ -27,6 +30,10 @@ public class Exercise {
 
         System.out.println(compareTwoStudents);
 
+        System.out.println("hashCode from student1: " + student1.hashCode());
+        System.out.println("hashCode from student2: " + student2.hashCode());
+
+        System.out.println(student1.toString());
 
     }
 }

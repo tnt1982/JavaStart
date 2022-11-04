@@ -21,6 +21,11 @@ public class Student {
     }
 
     @Override
+    public String toString() {
+        return "imię i nazwisko " + nameAndSurname + ", wiek " + age;
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(nameAndSurname, age);
     }
