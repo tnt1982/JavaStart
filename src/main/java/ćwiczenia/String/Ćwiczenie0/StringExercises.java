@@ -44,6 +44,8 @@ public class StringExercises {
 
         System.out.println(manyLevelsText.indent(4)); // metodą indent() dodajemy na początku wiersza dodatkowe spacje;
 
+
+
         String hello = "Hello ";
         String world = "World";
 
@@ -59,7 +61,18 @@ public class StringExercises {
 
         System.out.println("czas wykonania całego programu w ns: " + różnica);
 
+        String name5 = "Joanna";
+        char letter = name5.charAt(name5.length()-1);
+        System.out.println(letter);
 
-
+        String dice = """
+                
+                 -----
+                |     |
+                |  0  |
+                |     |
+                 -----
+                """;
+        System.out.println(dice);
     }
 }
