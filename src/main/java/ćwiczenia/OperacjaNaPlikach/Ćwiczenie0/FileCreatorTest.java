@@ -12,7 +12,8 @@ public class FileCreatorTest {
         Scanner scanner = new Scanner(file);
 
         // odczytywnie plików za pomocą klasy BufferedReader:
-        FileReader fileReader = new FileReader(fileName);
+        FileReader fileReader = new FileReader(fileName); // umożliwia odczytywanie bajt po bajcie, dlatego
+        // FileReadera opakowujemy w BufferedReadera, BR pozwala odczytywać plik wiersz po wierszu;
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         String nextLine = null;
