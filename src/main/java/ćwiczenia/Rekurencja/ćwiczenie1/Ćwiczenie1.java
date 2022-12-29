@@ -1,4 +1,4 @@
-package ćwiczenia.Rekurencja;
+package ćwiczenia.Rekurencja.ćwiczenie1;
 
 import java.util.Scanner;
 
