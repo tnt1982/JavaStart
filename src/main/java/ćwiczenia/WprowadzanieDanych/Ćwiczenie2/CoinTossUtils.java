@@ -1,4 +1,4 @@
-package ćwiczenia.WprowadzanieDanych1.Ćwiczenie2;
+package ćwiczenia.WprowadzanieDanych.Ćwiczenie2;
 
 import java.util.Random;
 
