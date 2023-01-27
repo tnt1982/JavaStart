@@ -47,4 +47,9 @@ public class Animal implements Serializable {
     public void setColour(String colour) {
         this.colour = colour;
     }
+
+    @Override
+    public String toString() {
+        return species + " " + name + " " + age + " " + colour;
+     }
 }
