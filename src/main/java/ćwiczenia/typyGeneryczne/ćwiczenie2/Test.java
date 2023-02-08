@@ -22,10 +22,18 @@ public class Test {
         printPairs(secondPair);
         printPairs(thirdPair);
 
+        System.out.println("czy są równe: " + isEquals(thirdPair));
+
     }
 
     private static <T, V> void printPairs(Pair<T, V> pairToPrint) {
         System.out.println(pairToPrint.getT() + " " + pairToPrint.getV());
     }
+
+    private static <T, V> boolean isEquals (Pair<T, V> pairToAdd) {
+        return pairToAdd.getT().equals(pairToAdd.getV());
+    }
+
+
 
 }
