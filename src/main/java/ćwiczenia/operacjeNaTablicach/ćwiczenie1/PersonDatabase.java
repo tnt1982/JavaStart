@@ -17,6 +17,47 @@ public class PersonDatabase {
         }
         persons[numberOfPeopleOnTheList] = person;
         numberOfPeopleOnTheList++;
+    }
 
+    Person get(int index) {
+        if (index >= numberOfPeopleOnTheList || index < 0) {
+            throw new ArrayIndexOutOfBoundsException("Index has to be positive and lower than " + numberOfPeopleOnTheList);
+        }
+        return persons[index];
+    }
+
+    int size() {
+        return numberOfPeopleOnTheList;
+    }
+
+    void remove(Person person) {
+        if (person == null) {
+            throw new NullPointerException("person cannot be null");
+        }
+        final int notFound = -1;
+        int foundIndex = notFound;
+        for (int i = 0; i < numberOfPeopleOnTheList && foundIndex == notFound; i++) {
+            if (person.equals(persons[i])) {
+                foundIndex = i;
+            }
+        }
+        if (foundIndex != notFound) {
+            System.arraycopy(persons, foundIndex + 1, persons, foundIndex, persons.length - foundIndex - 1);
+            numberOfPeopleOnTheList--;
+            persons[numberOfPeopleOnTheList] = null;
+        }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("PersonalDatabase size: " + numberOfPeopleOnTheList);
+        sb.append("\n");
+        for (int i = 0; i < numberOfPeopleOnTheList; i++) {
+            sb.append(" > ");
+            sb.append(persons[i].toString());
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 }
