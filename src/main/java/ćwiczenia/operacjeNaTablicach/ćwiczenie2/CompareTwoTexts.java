@@ -1,7 +1,6 @@
 package ćwiczenia.operacjeNaTablicach.ćwiczenie2;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class CompareTwoTexts {
 
@@ -35,7 +34,7 @@ public class CompareTwoTexts {
         containsTheSameChars(firstTextArray, secondTextArray);
     }
 
-    private static boolean containsTheSameChars (String[] firstText, String[] secondText) {
+    private static void containsTheSameChars(String[] firstText, String[] secondText) {
         Arrays.sort(firstText);
         Arrays.sort(secondText);
 
@@ -43,13 +42,8 @@ public class CompareTwoTexts {
         printArrays(secondText);
 
         boolean marker = false;
-        if (Arrays.equals(firstText, secondText)) {
-            marker = true;
-        } else {
-            marker = false;
-        }
+        marker = Arrays.equals(firstText, secondText);
         System.out.println(marker);
-        return marker;
     }
 
     public static <T> void printArrays(T[] array) {
