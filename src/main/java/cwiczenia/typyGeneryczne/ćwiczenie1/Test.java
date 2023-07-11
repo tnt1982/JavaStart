@@ -1,4 +1,4 @@
-package cwiczenia.typyGeneryczne.ćwieczenie1;
+package cwiczenia.typyGeneryczne.ćwiczenie1;
 
 public class Test {
     public static void main(String[] args) {
