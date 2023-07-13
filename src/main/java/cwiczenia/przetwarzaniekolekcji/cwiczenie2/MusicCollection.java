@@ -24,7 +24,7 @@ class MusicCollection {
         return songs
                 .stream()
                 .filter(song -> Objects.equals(song.getGenre(), genre))
-                .map(song -> song.getLength())
+                .map(Song::getLength)
                 .mapToInt(Integer::intValue)
                 .sum();
     }
