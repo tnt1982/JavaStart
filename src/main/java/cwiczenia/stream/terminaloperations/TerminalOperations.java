@@ -1,9 +1,12 @@
-package cwiczenia.stream.cwiczenie0;
+package cwiczenia.stream.terminaloperations;
+
+import cwiczenia.stream.cwiczenie0.Course;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@SuppressWarnings("ALL")
 public class TerminalOperations {
 
     public static void main(String[] args) {
