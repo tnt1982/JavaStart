@@ -1,5 +1,7 @@
 package cwiczenia.przetwarzaniekolekcji.cwiczenie2;
 
+import java.util.Objects;
+
 class Song {
     private String title;
     private int length; //sec
@@ -50,5 +52,22 @@ class Song {
         POP,
         ROCK,
         DANCE
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Song song)) return false;
+        return length == song.length && Objects.equals(title, song.title) && Objects.equals(artist, song.artist) && genre == song.genre;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, length, artist, genre);
+    }
+
+    @Override
+    public String toString() {
+        return title + ", " + length + "sec, " + artist + ", " + genre;
     }
 }
