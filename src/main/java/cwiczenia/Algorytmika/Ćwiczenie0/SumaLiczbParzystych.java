@@ -26,7 +26,7 @@ public class SumaLiczbParzystych {
         System.out.println("\n");
 
         System.out.println("drukujemy wszystkie liczby z tablicy numbers przy użyciu streamów");
-        Arrays.stream(numbers).forEach(System.out::print);
+        Arrays.stream(numbers).forEach(SumaLiczbParzystych::printWithComma);
 
         System.out.println("\n");
 
@@ -37,5 +37,9 @@ public class SumaLiczbParzystych {
             }
         }
         System.out.println("Suma liczb parzystych z pętli for-each wynosi: " + (sumFromLoop));
+    }
+
+    private static void printWithComma(final int element) {
+        System.out.print(element + ", ");
     }
 }
